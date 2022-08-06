@@ -1,24 +1,27 @@
 import replace
 import re
 from docx import Document
+
 document = Document()
 doc = Document('Leave Letter.docx')
-
+    
 pname =input("name: ")
+pemail=input("Your Email: ")  
 pcourse =input("course: ")    
 pyear = input("year: ")   
-pm_s=input("m_s: ")   
+pm_s=input("to ") 
+pmam_sir=input("mam or sir: ")
 preason=input("reason: ")   
 pdate=input("date: ")   
 
 chg_find=()
 chg_replace=()
 
-find_value=['!!!','@@@','###','&&&','<<<',"~~~"]
-replace_value=[pname,pcourse,pyear,pm_s,preason,pdate]
+find_value=['!!!','@@@','###','&&&','^^^','<<<',"~~~"]
+replace_value=[pname,pcourse,pyear,pm_s,pmam_sir,preason,pdate]
 i=0
 a=0
-while i<6:
+while i<7:
     
     regex1 = re.compile(find_value[i])
     chg_find=regex1
